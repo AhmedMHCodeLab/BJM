@@ -1,7 +1,8 @@
 import { Router } from 'express'
 const router = Router()
 import { createEnquiry } from '../controllers/enquiryController.js'
+import { validateEnquiryInput } from '../middleware/validationMiddleware.js'
 
-router.route('/').post(createEnquiry)
+router.post('/', validateEnquiryInput, createEnquiry)
 
 export default router
