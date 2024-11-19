@@ -52,5 +52,8 @@ export const validateQuotaInput = withValidationErrors([
     .withMessage('Quantity is required')
     .isInt()
     .withMessage('Quantity must be a number'),
-  body('budget').isInt().withMessage('Please enter a valid budget amount'),
+  body('budget')
+    .optional({ nullable: false })
+    .isInt()
+    .withMessage('Please enter a valid budget amount'),
 ])
