@@ -1,23 +1,20 @@
 import sendEmail from './sendEmail.js'
 
 const sendQuotaEmail = async ({
-  name,
+  companyName,
   email,
-  phone,
-  serviceSelection,
-  quantity,
-  budget,
+  contactNo,
+  subject,
+  description,
 }) => {
   return sendEmail({
     from: email,
-    subject: `New Quota: ${serviceSelection}`,
+    subject: `Subject: ${subject}`,
     html: `
-                <p>Name: ${name}</p>
+                <p>Company Name: ${companyName}</p>
                 <p>Email: ${email}</p>
-                <p>Phone: ${phone}</p>
-                <p>Service Selection: ${serviceSelection}</p>
-                <p>Quantity: ${quantity}</p>
-                ${budget ? `<p>Budget: ${budget}</p>` : ''}
+                <p>Contact No: ${contactNo}</p>
+                <p>Description: ${description}</p>
             `,
   })
 }

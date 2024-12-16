@@ -1,18 +1,12 @@
 import mongoose from 'mongoose'
-import { SERVICE_SELECTION } from '../utils/constants.js'
 
 const quotaSchema = new mongoose.Schema(
   {
-    name: String,
+    companyName: String,
     email: String,
-    phone: String,
-    serviceSelection: {
-      type: String,
-      enum: Object.values(SERVICE_SELECTION),
-      default: SERVICE_SELECTION.ENQUIRY,
-    },
-    quantity: Number,
-    budget: Number,
+    contactNo: String,
+    subject: String,
+    description: String,
   },
   { timestamps: true }
 )
