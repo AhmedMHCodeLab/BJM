@@ -1,12 +1,21 @@
-import { AppShell, Group, Button } from '@mantine/core'
+import { AppShell, Group, Button, Burger } from '@mantine/core'
 import { Link, Outlet } from 'react-router'
-import { NavLinks } from '../components'
+import { Navbar } from '../components'
+import { useDisclosure } from '@mantine/hooks'
 
 const SharedLayout = () => {
+  const [opened, { toggle }] = useDisclosure(false)
+
   return (
-    <AppShell header={{ height: 80 }} padding="xl">
+    <AppShell
+      header={{ height: { base: 80, md: 100, lg: 120 }, breakpoint: 'sm' }}
+      mx="auto"
+      px={32}
+      maw="80rem"
+      withBorder={false}
+    >
       <AppShell.Header>
-        <NavLinks />
+        <Navbar />
       </AppShell.Header>
       <AppShell.Main>
         <Outlet />
