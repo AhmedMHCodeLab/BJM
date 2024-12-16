@@ -1,0 +1,6 @@
+export { default as SharedLayout } from './SharedLayout'
+export { default as Services } from './Services'
+export { default as Landing } from './Landing'
+export { default as AboutUs } from './AboutUs'
+export { default as Gallery } from './Gallery'
+export { default as Program } from './Program'
