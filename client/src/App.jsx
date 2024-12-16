@@ -1,40 +1,26 @@
-import '@mantine/core/styles.css'
-
+import { BrowserRouter, Routes, Route } from 'react-router'
 import {
-  AppShell,
-  Button,
-  Group,
-  MantineProvider,
-  Skeleton,
-} from '@mantine/core'
+  AboutUs,
+  Gallery,
+  Landing,
+  Program,
+  Services,
+  SharedLayout,
+} from './pages'
 
-export default function App() {
+const App = () => {
   return (
-    <MantineProvider>
-      <AppShell
-        header={{ height: { base: 60, md: 65, lg: 70 } }}
-        navbar={{
-          width: { base: 100, md: 200, lg: 300 },
-        }}
-        padding="md"
-      >
-        <AppShell.Header>
-          <Group h="100%" px="md" justify="center">
-            <Button>Home</Button>
-            <Button>Services</Button>
-            <Button>About</Button>
-            <Button>Contact</Button>
-          </Group>
-        </AppShell.Header>
-        <AppShell.Navbar p="md">
-          Navbar
-          {Array(5)
-            .fill(0)
-            .map((_, index) => (
-              <Skeleton key={index} h={20} mt="sm" animate={true} />
-            ))}
-        </AppShell.Navbar>
-      </AppShell>
-    </MantineProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<Landing />} />
+          <Route path="about-us" element={<AboutUs />} />
+          <Route path="gallery" element={<Gallery />} />
+          <Route path="program" element={<Program />} />
+          <Route path="services" element={<Services />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }
+export default App
