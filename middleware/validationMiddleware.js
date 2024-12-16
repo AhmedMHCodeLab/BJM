@@ -16,44 +16,22 @@ const withValidationErrors = (validateValues) => {
   ]
 }
 
-export const validateEnquiryInput = withValidationErrors([
-  body('name')
-    .notEmpty()
-    .withMessage('Name is required')
-    .isAlpha()
-    .withMessage('Name must only contain alphabets'),
-  body('email')
-    .notEmpty()
-    .withMessage('Email is required')
-    .isEmail()
-    .withMessage('Invalid email format'),
-  body('phone').notEmpty().withMessage('Phone is required'),
-  body('subject').notEmpty().withMessage('Subject is required'),
-  body('message').notEmpty().withMessage('Message is required'),
-])
-
 export const validateQuotaInput = withValidationErrors([
-  body('name')
+  body('companyName')
     .notEmpty()
-    .withMessage('Name is required')
-    .isAlpha()
-    .withMessage('Name must only contain alphabets'),
+    .withMessage('Company Name is required')
+    .isAlphanumeric()
+    .withMessage('Company Name must be alphanumeric'),
   body('email')
     .notEmpty()
     .withMessage('Email is required')
     .isEmail()
     .withMessage('Invalid email format'),
-  body('phone').notEmpty().withMessage('Phone is required'),
-  body('serviceSelection')
-    .isIn(Object.values(SERVICE_SELECTION))
-    .withMessage('Invalid service selection'),
-  body('quantity')
+  body('contactNo').notEmpty().withMessage('Contact Number is required'),
+  body('subject')
     .notEmpty()
-    .withMessage('Quantity is required')
-    .isInt()
-    .withMessage('Quantity must be a number'),
-  body('budget')
-    .optional({ nullable: false })
-    .isInt()
-    .withMessage('Please enter a valid budget amount'),
+    .withMessage('Subject is required')
+    .isLength({ max: 20 })
+    .withMessage('Subject is too long'),
+  body('description').notEmpty().withMessage('Description is required'),
 ])

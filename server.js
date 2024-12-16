@@ -8,7 +8,6 @@ import cors from 'cors'
 const app = express()
 
 // routers
-import enquiryRouter from './routes/enquiryRouter.js'
 import quotaRouter from './routes/quotaRouter.js'
 
 // middleware
@@ -22,7 +21,6 @@ app.use(cors())
 app.use(express.json())
 
 // routes
-app.use('/api/v1/enquiry', enquiryRouter)
 app.use('/api/v1/quota', quotaRouter)
 
 // error handling

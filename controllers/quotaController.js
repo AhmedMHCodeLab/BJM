@@ -7,12 +7,11 @@ export const createQuota = async (req, res) => {
 
   // send email
   await sendQuotaEmail({
-    name: quota.name,
+    companyName: quota.companyName,
     email: quota.email,
-    phone: quota.phone,
-    serviceSelection: quota.serviceSelection,
-    quantity: quota.quantity,
-    budget: quota?.budget,
+    contactNo: quota.contactNo,
+    subject: quota.subject,
+    description: quota.description,
   })
   res.status(StatusCodes.CREATED).json({ msg: 'Quota created', quota })
 }
