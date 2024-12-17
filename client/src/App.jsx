@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router'
 import {
   AboutUs,
+  Error,
   Gallery,
   Landing,
   Program,
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="program" element={<Program />} />
           <Route path="services" element={<Services />} />
         </Route>
+        <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
   )

@@ -1,2 +1,6 @@
 export { default as NavLinks } from './NavLinks'
 export { default as Navbar } from './Navbar'
+export { default as SectionTitle } from './SectionTitle'
+export { default as ServicesCard } from './ServicesCard'
+export { default as ImageLogo } from './ImageLogo'
+export { default as Footer } from './Footer'

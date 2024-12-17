@@ -1,25 +1,20 @@
-import { Burger, Button, Drawer, Flex, Grid, Image } from '@mantine/core'
+import { Burger, Button, Drawer, Flex, Grid } from '@mantine/core'
 import NavLinks from './NavLinks'
-import logo from '../assets/images/logo.svg'
-import { Link, NavLink } from 'react-router'
+import { NavLink } from 'react-router'
 import { useDisclosure } from '@mantine/hooks'
 import { navLinks } from '../utils/constants'
+import ImageLogo from './ImageLogo'
 
 const Navbar = () => {
   const [opened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false)
 
   return (
-    <Grid mx="auto" px={32} maw="80rem" py="md" align="center">
+    <Grid mx="auto" px={32} maw="80rem" py="sm" align="center">
       <Grid.Col span={{ base: 'auto', sm: 2 }}>
-        <Link to="/">
-          <Image
-            src={logo}
-            h={{ base: '50', sm: '70', md: '80' }}
-            maw="180px"
-            fit="cover"
-          />
-        </Link>
+        <Flex>
+          <ImageLogo />
+        </Flex>
       </Grid.Col>
       <Grid.Col span="auto" offset={0.5} visibleFrom="sm">
         <NavLinks />
