@@ -1,0 +1,66 @@
+@import url('https://fonts.google.com/specimen/League+Spartan');
+*{
+    font-family: LeagueSpartan;
+}
+
+.cards-container {
+    margin-top: -90px;
+    padding: 3rem 0;    
+
+}
+  
+  /* Card Grid */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+  }
+  
+  /* Individual Card */
+  .card {
+    background-color: #2d3748; /* Slightly lighter dark gray */
+    color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Card Icon */
+  .card-icon {
+    background-color: #e53e3e; /* Red */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.5rem;
+  }
+  
+  .card-icon svg {
+    color: white;
+    width: 32px;
+    height: 32px;
+  }
+  
+  /* Card Title */
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+  
+  /* Card Description */
+  .card-description {
+    font-size: 0.9rem;
+    color: #cbd5e0; /* Light gray */
+    line-height: 1.5;
+  }
+  
