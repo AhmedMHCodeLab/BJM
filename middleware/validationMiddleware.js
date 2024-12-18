@@ -27,7 +27,11 @@ export const validateQuotaInput = withValidationErrors([
     .withMessage('Email is required')
     .isEmail()
     .withMessage('Invalid email format'),
-  body('contactNo').notEmpty().withMessage('Contact Number is required'),
+  body('contactNo')
+    .notEmpty()
+    .withMessage('Contact Number is required')
+    .isMobilePhone()
+    .withMessage('Invalid contact number'),
   body('subject')
     .notEmpty()
     .withMessage('Subject is required')

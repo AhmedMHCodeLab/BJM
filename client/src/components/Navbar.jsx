@@ -1,23 +1,39 @@
-import { Burger, Button, Drawer, Flex, Grid } from '@mantine/core'
+import {
+  Burger,
+  Button,
+  Drawer,
+  Flex,
+  Grid,
+  Group,
+  useMatches,
+} from '@mantine/core'
 import NavLinks from './NavLinks'
 import { NavLink } from 'react-router'
 import { useDisclosure } from '@mantine/hooks'
 import { navLinks } from '../utils/constants'
 import ImageLogo from './ImageLogo'
+import QuotaModal from './QuotaModal'
 
 const Navbar = () => {
   const [opened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false)
+  const span = useMatches({
+    base: 'auto',
+    sm: 2,
+  })
 
   return (
     <Grid mx="auto" px={32} maw="80rem" py="sm" align="center">
-      <Grid.Col span={{ base: 'auto', sm: 2 }}>
+      <Grid.Col span={span}>
         <Flex>
           <ImageLogo />
         </Flex>
       </Grid.Col>
-      <Grid.Col span="auto" offset={0.5} visibleFrom="sm">
+      <Grid.Col span="auto" visibleFrom="sm">
         <NavLinks />
+      </Grid.Col>
+      <Grid.Col span={span}>
+        <QuotaModal />
       </Grid.Col>
       <Burger
         opened={opened}
