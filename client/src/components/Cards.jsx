@@ -46,11 +46,6 @@ const Cards = () => {
       title: 'Team Building',
       description: 'Build and manage high-performing teams to drive your business forward.',
     },
-    {
-      icon: IconTarget,
-      title: 'Goal Setting',
-      description: 'Set and achieve ambitious business goals with our expert guidance and support.',
-    },
   ];
 
   return (

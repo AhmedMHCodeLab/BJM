@@ -4,8 +4,13 @@
 }
 
 .cards-container {
-    margin-top: -90px;
-    padding: 3rem 0;    
+    position: relative;
+    z-index: 1;
+    margin-top: -40px;
+    padding: 3rem 0; 
+    max-width: 60vw; 
+    margin: -15vh auto;
+
 
 }
   
@@ -19,8 +24,8 @@
   
   /* Individual Card */
   .card {
-    background-color: #2d3748; /* Slightly lighter dark gray */
-    color: white;
+    background-color: #fefefe; /* Slightly lighter dark gray */
+    color: rgb(0, 0, 0);
     border-radius: 12px;
     padding: 2rem;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
@@ -34,9 +39,8 @@
   
   /* Card Icon */
   .card-icon {
-    background-color: #e53e3e; /* Red */
     border-radius: 50%;
-    width: 60px;
+    max-width: 60px;
     height: 60px;
     display: flex;
     justify-content: center;
@@ -45,7 +49,7 @@
   }
   
   .card-icon svg {
-    color: white;
+    color: rgb(0, 0, 0);
     width: 32px;
     height: 32px;
   }
@@ -60,7 +64,7 @@
   /* Card Description */
   .card-description {
     font-size: 0.9rem;
-    color: #cbd5e0; /* Light gray */
+    color: #080113; /* Light gray */
     line-height: 1.5;
   }
   
