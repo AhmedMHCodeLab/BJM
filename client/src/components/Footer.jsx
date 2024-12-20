@@ -6,8 +6,8 @@ const Footer = () => {
   return (
     <Container
       fluid
-      px={{ base: 'xl', sm: '5rem', md: '10rem' }}
       py={{ base: 'lg', sm: 0 }}
+      px={{ base: 'xl', sm: 'lg', md: 'md', lg: 'sm' }}
       mt="auto"
       pos="relative"
       bg="purpleBlue.1"
@@ -15,6 +15,8 @@ const Footer = () => {
       <Flex
         gap="md"
         direction={{ base: 'column', sm: 'row' }}
+        maw="80rem"
+        mx="auto"
         justify="space-between"
         wrap="nowrap"
         align="center"
