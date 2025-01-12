@@ -1,4 +1,4 @@
-import { Card, Text, ThemeIcon, Title } from '@mantine/core'
+import { Card, Text, ThemeIcon } from '@mantine/core'
 
 const ServicesCard = ({ name, description, index }) => {
   return (

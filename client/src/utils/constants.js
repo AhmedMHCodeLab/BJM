@@ -13,6 +13,9 @@ export const navLinks = [
   { name: 'Services', path: 'services' },
 ]
 
+  
+
+
 export const services = [
   {
     index: 1,
@@ -70,3 +73,5 @@ export const socialLinks = [
     icon: IconBrandInstagram,
   },
 ]
+
+
