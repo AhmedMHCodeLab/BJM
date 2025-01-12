@@ -1,7 +1,6 @@
 import React from 'react';
-import HeroSection from "../components/HeroSection";
-import styles from '../components/clients.module.css';
-import Marquee from '../components/Marquee';  // Import Marquee component
+import HeroSection from "../components/Homepage/HeroSection";
+import Marquee from '../components/Homepage/Marquee';  // Import Marquee component
 import img1 from '../assets/images/marquee/1.svg';
 import img2 from '../assets/images/marquee/2.svg';
 import img3 from '../assets/images/marquee/3.svg';
@@ -10,8 +9,11 @@ import img5 from '../assets/images/marquee/5.svg';
 import img6 from '../assets/images/marquee/6.svg';
 import img7 from '../assets/images/marquee/7.svg';
 import img8 from '../assets/images/marquee/8.svg';
-import Cards from "../components/Cards";
+import Cards from "../components/Homepage/Cards";
 import { Box, Flex, Title } from '@mantine/core';
+import  HomeService from '../components/Homepage/HomeService';
+import Testmonial from '../components/Homepage/Testominal.jsx';
+
 
 
 const items = [
@@ -31,6 +33,12 @@ const Landing = () => {
       <HeroSection />
       <Cards />
       <Marquee items={items} duration={25} gap="lg" showGradient={true} />
+      <HomeService />
+      <Title order={2} align="center" mb={40}>
+        What Our Clients Say
+      </Title>
+      <Testmonial />
+      
     </div>
   );
 };
