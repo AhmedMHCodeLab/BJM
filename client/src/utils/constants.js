@@ -1,8 +1,11 @@
 import {
+  IconAdjustmentsCog,
   IconBrandInstagram,
   IconBrandLinkedin,
   IconBrandMeta,
   IconBrandX,
+  IconChessBishop,
+  IconFileSmile,
 } from '@tabler/icons-react'
 
 export const navLinks = [
@@ -12,9 +15,6 @@ export const navLinks = [
   { name: 'Program', path: 'program' },
   { name: 'Services', path: 'services' },
 ]
-
-  
-
 
 export const services = [
   {
@@ -74,4 +74,23 @@ export const socialLinks = [
   },
 ]
 
-
+export const solutions = [
+  {
+    name: 'Strategic Business Development',
+    description:
+      'Transform your business growth through expert-driven strategies. We help you develop robust business plans to increase revenue, strengthen market position, and expand your product portfolio and distribution networks.',
+    icon: IconChessBishop,
+  },
+  {
+    name: 'Operational Excellence',
+    description:
+      'Optimize your business performance with our proven operational expertise. We analyze your environment, deliver tailored solutions, and implement sustainable improvements that drive measurable results.',
+    icon: IconAdjustmentsCog,
+  },
+  {
+    name: 'HR & Organizational Development',
+    description:
+      'Enhance your organizational capabilities with our HR expertise. Our dedicated consultants partner with you to strengthen workforce management, implement development initiatives, and guide you through organizational transformation.',
+    icon: IconFileSmile,
+  },
+]

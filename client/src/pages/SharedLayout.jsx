@@ -1,6 +1,6 @@
 import { AppShell } from '@mantine/core'
 import { Outlet } from 'react-router'
-import { Footer, Navbar } from '../components'
+import { Footer, Navbar, WhatsAppBtn } from '../components'
 
 const SharedLayout = () => {
   return (
@@ -20,6 +20,7 @@ const SharedLayout = () => {
         </AppShell.Main>
       </AppShell>
       <Footer />
+      <WhatsAppBtn />
     </>
   )
 }
