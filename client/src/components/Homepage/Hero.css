@@ -1,0 +1,32 @@
+/* Hero Section */
+.hero-section {
+  position: relative;
+  margin-top: -4rem;
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+  background-image: url('../../assets/images/gradientBG.svg');
+  background-size: cover;
+  background-position: center;
+  }
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #2d3748;
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+  }
+  
+  .hero-title .highlight {
+    color: #5a67d8;
+  }
+  
+  .hero-description {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #718096;
+  }
+  

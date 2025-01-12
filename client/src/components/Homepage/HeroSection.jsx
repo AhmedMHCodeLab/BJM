@@ -11,10 +11,10 @@ const Hero = () => {
       {/* Content */}
       <Container size="lg" className="hero-content">
         <Title className="hero-title" align="center">
-          Discover the Power of <span className="highlight">True Consultancy</span>
+           Strategic Solutions <span className="highlight">Tailored For You</span>
         </Title>
-        <Text className="hero-description" size="lg" align="center" mt="sm">
-          Explore cutting-edge design solutions that transform the way you build web applications
+        <Text className="hero-description" size="xl" align="center" mt="sm" style={{ color: '#476f95' }}>
+          Navigate Complexity with Confidence
         </Text>
       </Container>
 

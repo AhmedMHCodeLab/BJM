@@ -1,0 +1,29 @@
+.marqueeTitle {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #01061d;
+}
+
+@media (max-width: 1200px) {
+  .marqueeTitle {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .marqueeTitle {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .marqueeTitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .marqueeTitle {
+    font-size: 1.25rem;
+  }
+}

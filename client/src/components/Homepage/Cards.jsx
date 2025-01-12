@@ -6,28 +6,6 @@ import './Cards.css'; // Import the new CSS file
 const Cards = () => {
   const cardRefs = useRef([]); // To reference each card DOM node
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in-up');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 } // Trigger when 10% of the card is visible
-    );
-
-    cardRefs.current.forEach((card) => {
-      if (card) observer.observe(card);
-    });
-
-    return () => {
-      cardRefs.current.forEach((card) => observer.unobserve(card));
-    };
-  }, []);
-
   const cardsData = [
     {
       icon: IconBriefcase,
@@ -46,11 +24,18 @@ const Cards = () => {
       title: 'Team Building',
       description: 'Build and manage high-performing teams to drive your business forward.',
     },
+    {
+      icon: IconTarget,
+      title: 'Goal Setting',
+      description: 'Set clear and achievable goals to measure your company’s success.',
+    },
   ];
+
+  
 
   return (
     <div className="cards-container">
-      <div className="cards-grid">
+      <div className="cards-grid" >
         {cardsData.map((card, index) => (
           <div
             key={index}
