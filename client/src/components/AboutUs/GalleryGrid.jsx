@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Text, Group, SimpleGrid, Paper, Title, Box, Modal, Image, Grid } from '@mantine/core';
+import { Container, Text, Paper, Title, Modal, Image, Box } from '@mantine/core';
 
 const projects = [
   { 
@@ -44,9 +44,6 @@ const projects = [
     description: 'An epic fantasy adventure.',
     image: 'https://via.placeholder.com/200x200?text=THE+QUEST'
   },
-  
-  
-  
 ];
 
 const ProjectCard = ({ project, onClick }) => {
@@ -66,7 +63,7 @@ const ProjectCard = ({ project, onClick }) => {
         cursor: 'pointer',
         transition: 'background-color 0.2s ease',
         position: 'relative',
-        overflow: 'hidden'
+        overflow: 'hidden',
       }}
     >
       {/* Adding the image */}
@@ -82,7 +79,7 @@ const ProjectCard = ({ project, onClick }) => {
           left: 0,
           zIndex: 1,
           filter: isHovered ? 'brightness(0.8)' : 'brightness(1)',
-          transition: 'filter 0.5s ease'
+          transition: 'filter 0.5s ease',
         }}
       />
       
@@ -101,7 +98,7 @@ const ProjectCard = ({ project, onClick }) => {
             zIndex: 3,
           }}
         >
-          <Text size="sm">Know More</Text>
+          <Text size="sm" color="white">Know More</Text>
         </Box>
       )}
     </Paper>
@@ -116,123 +113,56 @@ export default function PortfolioGrid() {
       <Title order={1} size="h2">MOMENTS WE SHARED</Title>
       <Text size="xl" mt="xs" mb="xs">Captured Times</Text>
 
-      <SimpleGrid 
-        cols={4} 
-        spacing="md"
-        breakpoints={[
-          { maxWidth: 'md', cols: 3 },
-          { maxWidth: 'sm', cols: 2 },
-          { maxWidth: 'xs', cols: 1 }
-        ]}
-      >
-        {projects.map(project => (
-          <ProjectCard 
-            key={project.id} 
-            project={project} 
-            onClick={setSelectedProject}
-          />
-        ))}
-      </SimpleGrid>
-
+      {/* Modal for displaying project details */}
       <Modal
         opened={!!selectedProject}
         onClose={() => setSelectedProject(null)}
-        title={null}
-        size="90vw"
-        styles={{ 
-          modal: { 
-            backgroundColor: '#1A1B1E',
-            maxWidth: '1400px',
-            width: '90vw',
-            maxHeight: '90vh',
-            padding: '1rem',
-            display: 'flex',
-            flexDirection: 'column',
-          },
-          header: {
-            position: 'absolute',
-            right: 0,
-            top: 0,
-            zIndex: 10,
-            margin: 0,
-            padding: '0.5rem',
-          },
-          close: {
-            color: 'white',
-            backgroundColor: 'rgba(0, 0, 0, 0.3)',
-            borderRadius: '50%',
-            '&:hover': {
-              backgroundColor: 'rgba(0, 0, 0, 0.5)',
-            }
-          },
-          body: {
-            height: '80vh',
-            padding: 0,
-            margin: 0,
-          }
+        centered
+        size="lg"
+        overlayBlur={2}
+        radius="md"
+        withCloseButton={true}
+        styles={{
+          modal: { backgroundColor: '#1A1B1E', color: 'white' },
         }}
       >
         {selectedProject && (
-          <Grid gutter={0} sx={{ height: '100%' }}>
-            {/* Image Column - 80% width */}
-            <Grid.Col span={9.6}>
-              <Box sx={{ 
-                height: '100%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                backgroundColor: '#0A0A0A',
-                borderRadius: '4px 0 0 4px',
-                overflow: 'hidden',
-              }}>
-                <Image 
-                  src={selectedProject.image}
-                  alt={selectedProject.title}
-                  sx={{
-                    maxWidth: '100%',
-                    maxHeight: '100%',
-                    objectFit: 'contain',
-                  }}
-                />
-              </Box>
-            </Grid.Col>
-
-            {/* Description Column - 20% width */}
-            <Grid.Col span={2.4}>
-              <Box sx={{ 
-                height: '100%',
-                padding: '2rem',
-                backgroundColor: '#1A1B1E',
-                borderRadius: '0 4px 4px 0',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '1rem',
-              }}>
-                <Title 
-                  order={2}
-                  sx={{ 
-                    color: 'white',
-                    fontSize: '1.5rem',
-                    fontWeight: 500,
-                  }}
-                >
-                  {selectedProject.title}
-                </Title>
-                
-                <Text 
-                  sx={{ 
-                    color: 'rgba(255, 255, 255, 0.8)',
-                    lineHeight: 1.6,
-                    fontSize: '1rem',
-                  }}
-                >
-                  {selectedProject.description}
-                </Text>
-              </Box>
-            </Grid.Col>
-          </Grid>
+          <>
+            <Image 
+              src={selectedProject.image} 
+              alt={selectedProject.title} 
+              fit="contain" 
+              radius="md" 
+              mb="md" 
+            />
+            <Title order={2} size="h3" align="center">{selectedProject.title}</Title>
+            <Text size="sm" align="center" mt="sm" color="dimmed">{selectedProject.description}</Text>
+          </>
         )}
       </Modal>
+
+      {/* Grid Layout */}
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
+        gap: '1rem',
+        gridAutoFlow: 'dense',
+      }}>
+        {projects.map(project => (
+          <div 
+            key={project.id}
+            style={{
+              gridColumn: project.size === 'large' ? 'span 2' : 'span 1',
+              gridRow: project.size === 'large' ? 'span 2' : 'span 1',
+            }}
+          >
+            <ProjectCard 
+              project={project} 
+              onClick={setSelectedProject} 
+            />
+          </div>
+        ))}
+      </div>
     </Container>
   );
 }

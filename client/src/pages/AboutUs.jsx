@@ -5,13 +5,17 @@ import MGV from '../components/AboutUs/MGV';
 
 const AboutUs = () => {
   return (
-    <>
-    <SectionTitle title="Our Team" />
-    <ProfileCards/>
-    <MGV/>
-
-
-    </>
+    <div style={{ padding: '2rem' }}>
+      
+      <div  style={{ textAlign: 'center' }}>
+        <SectionTitle title="Our Team" />
+      <ProfileCards/>
+      </div>
+      <div>
+      <MGV/>
+      </div>
+      
+    </div>
   );
 };
 export default AboutUs
