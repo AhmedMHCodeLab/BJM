@@ -24,7 +24,7 @@ const galleryData = [
     title: 'Bali - Indonesia',
     subtitle: 'Paradise on Earth awaits',
     location: 'Gambia',
-    image: 'https://scontent.fkul8-5.fna.fbcdn.net/v/t39.30808-6/305238122_572580524451636_4026373282440208838_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=fHLs5oRTfToQ7kNvgF8uulm&_nc_zt=23&_nc_ht=scontent.fkul8-5.fna&_nc_gid=A4H4fMJJR2d97p0xXQ4Q23D&oh=00_AYAHACxF6HJxs6uNLEpW63dLiDYI2UbQ-kbAIvoEIsG-2A&oe=677D8459',
+    image: 'https://scontent.fkul8-5.fna.fbcdn.net/v/t39.30808-6/305238122_572580524451636_4026373282440208838_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=2tnSSZHbCGsQ7kNvgFJfXAb&_nc_oc=AdhLy8cTfRG_CUF60f3Iu74BvH3wRKNyS8fgZJGjVkAV9RctJkm6ZBiLhuTQBoYQ37lv-Mkv6jzYIyTi34HxLy64&_nc_zt=23&_nc_ht=scontent.fkul8-5.fna&_nc_gid=AiGsPcBKS03WjWQk6cOVn21&oh=00_AYBwZoi9-crX0-lY5rKMxuvdRDDBK129DAOndgSd-IpZiQ&oe=67B6A559',
   },
   {
     id: 4,

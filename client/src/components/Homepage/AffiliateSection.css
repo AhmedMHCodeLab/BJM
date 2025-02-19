@@ -1,0 +1,139 @@
+/* General Styles */
+.affiliate-section {
+    margin: 32px 0;
+  }
+  
+  /* Paper-like Container */
+  .affiliate-paper {
+    background-color: rgba(83, 137, 218, 0.096);
+    border-radius: 24px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 32px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+    position: relative; /* For absolute positioning of close button */
+  }
+  
+  /* Close Button (added) */
+  .close-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #888; /* Subtle gray color */
+    cursor: pointer;
+    z-index: 1; /* Ensure it's above the content */
+  }
+  
+  /* Logo Container (Collapsed State) */
+  .affiliate-logo-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Expanded Layout (Grid) */
+  .expanded-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns by default */
+    gap: 32px;
+  }
+  
+  /* Logo Column (or Top Section on Mobile) */
+  .logo-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  /* Content (Text) */
+  .expanded-mam-content {
+    /* Add padding or margin if needed */
+  }
+  
+  .mam-title {
+    font-size: 1.5rem; /* Adjust as needed */
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem; /* Space after the title */
+  }
+  
+  .mam-description {
+    font-size: 1rem; /* Adjust as needed */
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem; /* Space after the description */
+  }
+  
+  .mam-services {
+    list-style: none; /* Remove bullet points */
+    padding-left: 0;
+    margin-bottom: 1rem; /* Space after the list */
+  }
+  
+  .mam-services li {
+    font-size: 1rem; /* Adjust as needed */
+    color: #555;
+    margin-bottom: 0.25rem;
+  }
+  
+  .mam-summary {
+    font-size: 1rem; /* Adjust as needed */
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 1rem; /* Space after the summary */
+  }
+  
+  /* Button Styling */
+  .mam-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: #663399; /* Example:  A purple color */
+    text-decoration: none;
+    border-radius: 24px;
+    transition: background-color 0.2s ease;
+    text-align: center;
+    margin-top: 1rem;
+    width: auto;
+  }
+  
+  .mam-button:hover {
+    background-color: #4d267f; /* Darker shade */
+  }
+  
+  /* Disclosure */
+  .mam-disclosure {
+    font-size: 0.875rem; /* Smaller font size */
+    color: #777;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  /* Media Query for Mobile (Responsive Design) */
+  @media (max-width: 768px) {
+    .expanded-layout {
+      grid-template-columns: 1fr; /* Single column on small screens */
+      gap: 16px;
+    }
+  
+    .mam-title,
+    .mam-description,
+    .mam-summary {
+      text-align: center;
+    }
+  
+    .mam-services {
+      padding-left: 0;
+    }
+  
+    .mam-button{
+        width: 100%;
+    }
+  }

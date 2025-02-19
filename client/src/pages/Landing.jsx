@@ -13,7 +13,7 @@ import Cards from "../components/Homepage/Cards";
 import { Box, Flex, Title } from '@mantine/core';
 import  HomeService from '../components/Homepage/HomeService';
 import Testmonial from '../components/Homepage/Testominal.jsx';
-
+import MAM from '../components/Homepage/MAM.jsx'
 
 
 const items = [
@@ -33,12 +33,18 @@ const Landing = () => {
       <HeroSection />
       <Cards />
       <Marquee items={items} duration={25} gap="lg" showGradient={true} />
+      <Title order={2} align="center" mb={40}>
+        Affliates
+      </Title>
+      <MAM/>
+
       <HomeService />
+
       <Title order={2} align="center" mb={40}>
         What Our Clients Say
       </Title>
       <Testmonial />
-      
+
     </div>
   );
 };

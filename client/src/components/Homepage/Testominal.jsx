@@ -2,6 +2,9 @@ import { useEffect, useState } from 'react';
 import { Card, Text, Button, Center, Stack, Badge, Box, rem, Group, Paper } from '@mantine/core';
 import { IconChevronLeft, IconChevronRight, IconQuote } from '@tabler/icons-react';
 import { useInterval } from '@mantine/hooks';
+import React from 'react';
+import styles from './TestimonialCarousel.module.css';
+import cardStyles from './TestimonialCarousel.module.css';
 
 
 export const testimonials = [
@@ -139,6 +142,7 @@ export function TestimonialCarousel() {
           shadow="sm"
           padding={rem(40)}
           radius="lg"
+          className={cardStyles.card} // Apply the glassmorphism style
           style={{
             position: 'absolute',
             top: '50%',
