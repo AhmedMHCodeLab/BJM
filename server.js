@@ -33,11 +33,11 @@ app.use(errorHandlerMiddleware)
 const port = process.env.PORT || 5000
 
 try {
-  await mongoose.connect(process.env.MONGO_URI)
+  await mongoose.connect(process.env.MONGO_URI);
   app.listen(port, () => {
-    console.log(`Server is listening on port ${port}...`)
-  })
+    console.log(`Server is listening on port ${port}...`);
+  });
 } catch (error) {
-  console.log(error)
-  process.exit(1)
+  console.log(error);
+  process.exit(1);
 }
