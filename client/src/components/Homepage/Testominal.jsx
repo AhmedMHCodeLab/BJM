@@ -17,8 +17,11 @@ import {
   IconQuote,
 } from '@tabler/icons-react'
 import { useInterval } from '@mantine/hooks'
+import React from 'react'
+import styles from './TestimonialCarousel.module.css'
+import cardStyles from './TestimonialCarousel.module.css'
 
-const testimonials = [
+export const testimonials = [
   {
     logo: 'UNDP',
     company: 'United Nations Development Programme, The Gambia',
@@ -164,6 +167,7 @@ export function TestimonialCarousel() {
           shadow="sm"
           padding={rem(40)}
           radius="lg"
+          className={cardStyles.card} // Apply the glassmorphism style
           style={{
             position: 'absolute',
             top: '50%',

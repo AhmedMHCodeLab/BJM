@@ -14,3 +14,19 @@
   width: 24px;
   border-radius: 12px;
 }
+
+.card {
+  background: rgba(255, 255, 255, 0.084);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.092);
+  padding: 20px; /* Adjust as needed */
+  margin: 10px; /* Adjust as needed */
+  
+}
+
+.cardContent {
+  /* Add any additional styling for the content inside the card */
+}

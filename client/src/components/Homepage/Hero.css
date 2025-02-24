@@ -1,7 +1,7 @@
 /* Hero Section */
 .hero-section {
   position: relative;
-  margin-top: -4rem;
+  margin-top: auto;
   padding-top: 20vh;
   padding-bottom: 20vh;
   background-image: url('../../assets/images/gradientBG.svg');
