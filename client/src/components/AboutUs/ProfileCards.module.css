@@ -1,163 +1,169 @@
-.container{
-    background:linear-gradient(to top, rgba(8, 20, 248, 0.558), rgba(0, 0, 0, 0));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 70vh;
-    padding: 2rem;
-    flex-wrap: wrap;
-    width: 100%;
+.container {
+  background: linear-gradient(
+    to top,
+    rgba(8, 20, 248, 0.558),
+    rgba(0, 0, 0, 0)
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  padding-inline: 2rem;
+  padding-bottom: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    aspect-ratio: 9/16;
-    min-width: 280px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-    transition: ease-in 1s;
-    margin-bottom: 1rem;
-  }
-  
-  .card::before {
-    content: "";
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .card::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    filter: blur(30px);
-  }
-  
-  .cardInner {
-    position: absolute;
-    inset: 6px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.558), rgba(0, 0, 0, 0));
-    z-index: 2;
-    opacity: 0;
-    transition: opacity 0.5s;
-  }
-  
-  .card:hover .cardInner {
-    opacity: 1;
-  }
-  
-  .content {
-    top: 60%;
-    position: absolute;
-    z-index: 3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transform: scale(0);
-    transition: ease 0.5s;
-  }
-  
-  .card:hover .content {
-    transform: scale(0.85);
-    bottom: 25px;
-  }
-  
-  .title {
-    color: #fff;
-    font-weight: 500;
-    line-height: 1em;
-    font-size: 1.5em;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    text-align: center;
-    text-wrap: wrap;
-  }
-  
-  .title span {
-    font-weight: 300;
-    font-size: 0.7em;
-  }
-  
-  .sci {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    margin-top: 5px;
-  }
-  
-  .sci li {
-    list-style: none;
-  }
-  
-  .sci li .fa-brands {
-    width: 14px;
-  }
-  
-  .sci li .fa-facebook {
-    width: 10px;
-  }
-  
-  .socialButton {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.5);
-    fill: currentColor;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px;
-    transition: 0.5s;
-  }
-  
-  .socialButton:hover {
-    fill: currentColor;
-    color: rgba(255, 255, 255, 1);
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 'max-content';
+  width: 100%;
+  /* aspect-ratio: 9/16; */
+  /* min-width: 280px; */
+  /* background-size: cover;
+  background-position: center; */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transition: ease-in 1s;
+  margin-bottom: 1rem;
+}
+
+.card::before {
+  content: '';
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* .card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(30px);
+} */
+
+.cardInner {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.558), rgba(0, 0, 0, 0));
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.card:hover .cardInner {
+  opacity: 1;
+}
+
+.content {
+  top: 60%;
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(0);
+  transition: ease 0.5s;
+}
+
+.card:hover .content {
+  transform: scale(0.85);
+  bottom: 25px;
+}
+
+.title {
+  color: #fff;
+  font-weight: 500;
+  line-height: 1em;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  text-wrap: wrap;
+}
+
+.title span {
+  font-weight: 300;
+  font-size: 0.7em;
+}
+
+.sci {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.sci li {
+  list-style: none;
+}
+
+.sci li .fa-brands {
+  width: 14px;
+}
+
+.sci li .fa-facebook {
+  width: 10px;
+}
+
+.socialButton {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  fill: currentColor;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  transition: 0.5s;
+}
+
+.socialButton:hover {
+  fill: currentColor;
+  color: rgba(255, 255, 255, 1);
+}
 
 @media (min-width: 992px) {
-    .card {
-        min-width: 300px;
-    }
-    .container {
-        padding: 3rem;
-    }
+  .card {
+    /* min-width: 300px; */
+  }
+  .container {
+    padding-bottom: 3rem;
+  }
 }
 
 @media (max-width: 991px) {
-    .title {
-        font-size: 1.3em;
-    }
+  .title {
+    font-size: 1.3em;
+  }
 }
 
 @media (max-width: 768px) {
-    .title {
-        font-size: 1.2em;
-    }
-    .title span {
-        font-size: 0.6em;
-    }
+  .title {
+    font-size: 1.2em;
+  }
+  .title span {
+    font-size: 0.6em;
+  }
 }
 
 @media (max-width: 767px) {
-    .title {
-        font-size: 1.2em;
-    }
-    
-    .title span {
-        font-size: 0.6em;
-    }
+  .title {
+    font-size: 1.2em;
+  }
+
+  .title span {
+    font-size: 0.6em;
+  }
 }
