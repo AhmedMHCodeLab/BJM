@@ -1,23 +1,17 @@
 import React from 'react'
-import ProfileCards from '../components/AboutUs/ProfileCards';
+import ProfileCards from '../components/AboutUs/ProfileCards'
 import { SectionTitle } from '../components'
-import MGV from '../components/AboutUs/MGV';
-import BJMMissionValues from '../components/AboutUs/MVO';
+import MGV from '../components/AboutUs/MGV'
+import BJMMissionValues from '../components/AboutUs/MVO'
 
 const AboutUs = () => {
   return (
-    <div style={{ padding: '2rem' }}>
-      
-      <div  style={{ textAlign: 'center' }}>
-        <SectionTitle title="Our Team" />
-      <ProfileCards/>
-      </div>
-      <BJMMissionValues/>
-      <div>
-      <MGV/>
-      </div>
-      
+    <div style={{ marginBlock: '3.125rem' }}>
+      <SectionTitle center title="Our Team" />
+      <ProfileCards />
+      <BJMMissionValues />
+      <MGV />
     </div>
-  );
-};
+  )
+}
 export default AboutUs

@@ -8,7 +8,6 @@ const SharedLayout = () => {
       <AppShell
         header={{ height: { base: 80, md: 100, lg: 100 }, breakpoint: 'sm' }}
         mx="auto"
-        maw="100vw"
         withBorder={false}
       >
         <AppShell.Header>

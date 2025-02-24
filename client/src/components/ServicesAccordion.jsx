@@ -3,12 +3,12 @@ import { solutions } from '../utils/constants'
 
 const ServicesAccordion = () => {
   return (
-    <Accordion py={32} variant="separated" mb={32}>
+    <Accordion variant="separated" mb={32} radius="md">
       {solutions.map((solution, index) => {
         return (
-          <Accordion.Item key={index} value={solution.name}>
+          <Accordion.Item key={index} value={solution.name} bg="purpleBlue.0">
             <Accordion.Control
-              icon={<solution.icon />}
+              icon={<solution.icon fontSize="1rem" />}
               style={{ fontSize: '2rem' }}
             >
               <Text size="xl">{solution.name}</Text>
