@@ -77,12 +77,12 @@ import React, {
             // Collapsed State: Just the Logo
             <div className="affiliate-logo-container">
               <img
-                src="client/src/assets/mam.png"
-                alt="MAM Logo"
-                width={150}
+              src="/mam.png"
+              alt="MAM Logo"
+              width={150}
               />
             </div>
-          ) : (
+            ) : (
             // Expanded State: Split Layout
             <div className="expanded-layout">
   
