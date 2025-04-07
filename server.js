@@ -5,6 +5,9 @@ import express from 'express'
 import morgan from 'morgan'
 import mongoose from 'mongoose'
 import cors from 'cors'
+import path from 'path';
+import { fileURLToPath } from 'url';
+const __dirname = fileURLToPath(new URL('.', import.meta.url));
 const app = express()
 
 // routers
@@ -23,10 +26,20 @@ app.use(express.json())
 // routes
 app.use('/api/v1/quota', quotaRouter)
 
-// error handling
-app.use('*', (req, res) => {
-  res.status(404).json({ msg: 'not found' })
-})
+// Serve frontend in production
+if (process.env.NODE_ENV === 'production') {
+  // Serve static files
+  app.use(express.static(path.join(__dirname, 'client/dist')));
+  
+  // Handle React routing
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client/dist/index.html'));
+  });
+} else {
+  app.use('*', (req, res) => {
+    res.status(404).json({ msg: 'not found' })
+  });
+}
 
 app.use(errorHandlerMiddleware)
 
