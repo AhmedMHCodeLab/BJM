@@ -97,7 +97,7 @@ import React, {
               {/* Logo Column (or Top Section on Mobile) */}
               <div className="logo-column">
                 <img
-                  src="../../public/mam.png"
+                  src="/mam.png"
                   alt="MAM Logo"
                   width={300}
                   height={150}
