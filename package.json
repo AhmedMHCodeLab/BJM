@@ -11,7 +11,7 @@
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "build": "cd client && npm run build",
     "start": "node server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run setup-project && npm run build"
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "keywords": [],
   "author": "",

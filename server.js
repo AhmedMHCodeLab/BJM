@@ -41,6 +41,15 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
+// Serve static files from React app
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, 'client/dist')));
+  
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client/dist/index.html'));
+  });
+}
+
 app.use(errorHandlerMiddleware)
 
 const port = process.env.PORT || 5000
