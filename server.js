@@ -7,38 +7,63 @@ import mongoose from 'mongoose'
 import cors from 'cors'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import fs from 'fs'  // Add this import
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url))
 const app = express()
 
-// routers
-import quotaRouter from './routes/quotaRouter.js'
-
 // middleware
 import errorHandlerMiddleware from './middleware/errorHandlerMiddleware.js'
 
+// CORS with proper options
+app.use(cors({
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}))
+
+// Request logging
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'))
+} else {
+  app.use((req, res, next) => {
+    console.log(`${req.method} ${req.path}`);
+    next();
+  })
 }
 
-app.use(cors())
 app.use(express.json())
 
-// routes
+// Add diagnostic endpoint
+app.get('/api/debug', (req, res) => {
+  const clientDistPath = path.resolve(__dirname, './client/dist')
+  const indexPath = path.resolve(__dirname, './client/dist/index.html')
+  
+  res.json({
+    env: process.env.NODE_ENV,
+    paths: {
+      dirname: __dirname,
+      clientDistPath,
+      indexPath
+    },
+    exists: {
+      clientDist: fs.existsSync(clientDistPath),
+      indexHtml: fs.existsSync(indexPath)
+    }
+  })
+})
+
+// IMPORTANT: Serve static files BEFORE API routes
+app.use(express.static(path.resolve(__dirname, './client/dist')))
+
+// routers
+import quotaRouter from './routes/quotaRouter.js'
 app.use('/api/v1/quota', quotaRouter)
 
-// Serve static files from React app
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.resolve(__dirname, './client/dist')))
-  
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './client/dist', 'index.html'))
-  })
-} else {
-  app.use('*', (req, res) => {
-    res.status(404).json({ msg: 'not found' })
-  })
-}
+// IMPORTANT: Catch-all route AFTER API routes
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, './client/dist/index.html'))
+})
 
 app.use(errorHandlerMiddleware)
 

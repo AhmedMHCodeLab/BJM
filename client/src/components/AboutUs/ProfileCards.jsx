@@ -31,16 +31,6 @@ const designers = [
     },
   },
   {
-    name: 'Mr. Paul Joesph Musa',
-    title: 'Director, Director and Company Secretary',
-    image: 'https://bjmafrica.com/wp-content/uploads/2024/08/pBJM.jpg',
-    social: {
-      facebook: 'https://facebook.com/alicejohnson',
-      twitter: 'https://twitter.com/alicejohnson',
-      instagram: 'https://instagram.com/alicejohnson',
-    },
-  },
-  {
     name: 'Mr. Hadim Ndow',
     title: 'Director, Business & Organization Development',
     image:

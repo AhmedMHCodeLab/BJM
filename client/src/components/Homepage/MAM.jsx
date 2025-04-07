@@ -77,7 +77,7 @@ import React, {
             // Collapsed State: Just the Logo
             <div className="affiliate-logo-container">
               <img
-                src="/client/src/assets/mam.png"
+                src="https://github.com/AhmedMHCodeLab/BJM/blob/57a3a5da2c7a88339e7409a343394cfa6bb907fd/client/src/assets/mam.png"
                 alt="MAM Logo"
                 width={150}
               />
