@@ -1,5 +1,5 @@
 import { Button, Center, Flex, Text, Title } from '@mantine/core'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router'
 
 const Error = () => {
   return (

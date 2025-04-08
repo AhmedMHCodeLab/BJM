@@ -1,5 +1,5 @@
 import { Group, Button, useMatches } from '@mantine/core'
-import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router'
 import { navLinks } from '../utils/constants'
 
 const NavLinks = () => {
