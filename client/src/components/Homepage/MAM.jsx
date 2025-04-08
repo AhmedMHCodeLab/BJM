@@ -77,7 +77,7 @@ import React, {
             // Collapsed State: Just the Logo
             <div className="affiliate-logo-container">
               <img
-              src="/mam.png"
+              src="https://github.com/AhmedMHCodeLab/BJM/blob/57a3a5da2c7a88339e7409a343394cfa6bb907fd/client/src/assets/mam.png?raw=true"
               alt="MAM Logo"
               width={150}
               />
@@ -97,7 +97,7 @@ import React, {
               {/* Logo Column (or Top Section on Mobile) */}
               <div className="logo-column">
                 <img
-                  src="/mam.png"
+                  src="https://github.com/AhmedMHCodeLab/BJM/blob/57a3a5da2c7a88339e7409a343394cfa6bb907fd/client/src/assets/mam.png?raw=true"
                   alt="MAM Logo"
                   width={300}
                   height={150}
