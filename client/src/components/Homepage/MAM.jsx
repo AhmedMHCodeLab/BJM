@@ -33,8 +33,7 @@ import React, {
         </ul>
         <p className="mam-summary" style={{ textAlign: isMobile ? 'center' : 'left' }}>{MAMIntro.summary}</p>
         <a
-          href="[MAM's website link]" // Replace with MAM's affiliate link
-          target="_blank"
+          href="https://mam-ga-76f7cc7199e7.herokuapp.com/" 
           rel="noopener noreferrer"
           className="mam-button"
         >
