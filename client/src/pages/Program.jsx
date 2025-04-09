@@ -265,7 +265,7 @@ const Program = () => {
         <div style={{ display: "flex", flexWrap: "wrap", gap: "40px", alignItems: "center" }}>
           <div style={{ flex: "1 1 400px" }}>
             <img
-              src="https://placehold.co/600x400/e0e0ff/4a4a8a?text=Student+Support"
+              src="https://github.com/AhmedMHCodeLab/BJM/blob/main/client/src/assets/images/internship.png"
               alt="Students in a professional setting"
               style={{ width: "100%", borderRadius: "8px", boxShadow: "0 4px 20px rgba(0,0,0,0.1)" }}
             />
@@ -507,7 +507,7 @@ const Program = () => {
           <div style={{ flex: "1 1 400px" }}>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "15px" }}>
               <img
-                src="https://placehold.co/300x200/e0e0ff/4a4a8a?text=Workshop"
+                src="https://github.com/AhmedMHCodeLab/BJM/blob/main/client/src/assets/images/meeting.png"
                 alt="Team workshop session"
                 style={{ width: "100%", borderRadius: "8px", boxShadow: "0 4px 10px rgba(0,0,0,0.1)" }}
               />
