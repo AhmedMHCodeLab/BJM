@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { FiChevronDown, FiChevronRight, FiBook, FiBriefcase, FiAward, FiHome } from "react-icons/fi"
+import QuotaModal from "../components/QuotaModal"
 
 const Program = () => {
   // State for accordion sections
@@ -170,7 +171,7 @@ const Program = () => {
           </div>
           <div style={{ flex: "1 1 400px" }}>
             <img
-              src="https://placehold.co/600x400/e0e0ff/4a4a8a?text=Professional+Development"
+              src="https://i.pinimg.com/736x/94/f4/f7/94f4f7a84a23158e16d39d589c0e23e4.jpg"
               alt="Professional development session"
               style={{ width: "100%", borderRadius: "8px", boxShadow: "0 4px 20px rgba(0,0,0,0.1)" }}
             />
@@ -265,7 +266,7 @@ const Program = () => {
         <div style={{ display: "flex", flexWrap: "wrap", gap: "40px", alignItems: "center" }}>
           <div style={{ flex: "1 1 400px" }}>
             <img
-              src="https://github.com/AhmedMHCodeLab/BJM/blob/main/client/src/assets/images/internship.png"
+              src="https://github.com/AhmedMHCodeLab/BJM/blob/main/client/src/assets/images/internship.png?raw=true"
               alt="Students in a professional setting"
               style={{ width: "100%", borderRadius: "8px", boxShadow: "0 4px 20px rgba(0,0,0,0.1)" }}
             />
@@ -507,22 +508,22 @@ const Program = () => {
           <div style={{ flex: "1 1 400px" }}>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "15px" }}>
               <img
-                src="https://github.com/AhmedMHCodeLab/BJM/blob/main/client/src/assets/images/meeting.png"
+                src="https://github.com/AhmedMHCodeLab/BJM/blob/main/client/src/assets/images/meeting.png?raw=true"
                 alt="Team workshop session"
                 style={{ width: "100%", borderRadius: "8px", boxShadow: "0 4px 10px rgba(0,0,0,0.1)" }}
               />
               <img
-                src="https://placehold.co/300x200/e0e0ff/4a4a8a?text=Team+Building"
+                src="https://github.com/AhmedMHCodeLab/BJM/blob/main/client/src/assets/images/ProgramHero.jpg?raw=true"
                 alt="Team building activity"
                 style={{ width: "100%", borderRadius: "8px", boxShadow: "0 4px 10px rgba(0,0,0,0.1)" }}
               />
               <img
-                src="https://placehold.co/300x200/e0e0ff/4a4a8a?text=Planning"
+                src="https://github.com/AhmedMHCodeLab/BJM/blob/main/client/src/assets/images/progress.jpg?raw=true"
                 alt="Strategic planning session"
                 style={{ width: "100%", borderRadius: "8px", boxShadow: "0 4px 10px rgba(0,0,0,0.1)" }}
               />
               <img
-                src="https://placehold.co/300x200/e0e0ff/4a4a8a?text=Retreat"
+                src="https://github.com/AhmedMHCodeLab/BJM/blob/main/client/src/assets/images/stonksWallet.jpg?raw=true"
                 alt="Retreat location"
                 style={{ width: "100%", borderRadius: "8px", boxShadow: "0 4px 10px rgba(0,0,0,0.1)" }}
               />
@@ -549,178 +550,10 @@ const Program = () => {
           Ready to elevate your professional development strategy? Contact BJM today to discuss how our tailored
           programs can help you achieve your goals.
         </p>
-        <button
-          style={{
-            backgroundColor: "#8a4fff",
-            border: "none",
-            padding: "15px 30px",
-            borderRadius: "5px",
-            color: "white",
-            fontWeight: "bold",
-            cursor: "pointer",
-            fontSize: "18px",
-          }}
-        >
-          Schedule a Call
-        </button>
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <QuotaModal />
+        </div>
       </section>
-
-      {/* Footer */}
-      <footer
-        id="contact"
-        style={{
-          backgroundColor: "#4a4a8a",
-          color: "white",
-          padding: "60px 40px 30px",
-        }}
-      >
-        <div
-          style={{
-            maxWidth: "1200px",
-            margin: "0 auto",
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-            gap: "40px",
-          }}
-        >
-          <div>
-            <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "20px" }}>
-              <span style={{ fontWeight: "bold", fontSize: "24px" }}>BJM</span>
-              <span>Professional Development</span>
-            </div>
-            <p style={{ lineHeight: "1.6", color: "#e0e0ff" }}>
-              Driving excellence through innovative professional development solutions for individuals and
-              organizations.
-            </p>
-          </div>
-
-          <div>
-            <h3 style={{ marginBottom: "20px", fontSize: "18px" }}>Navigation</h3>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-              <li style={{ marginBottom: "10px" }}>
-                <a href="#overview" style={{ color: "#e0e0ff", textDecoration: "none" }}>
-                  Overview
-                </a>
-              </li>
-              <li style={{ marginBottom: "10px" }}>
-                <a href="#courses" style={{ color: "#e0e0ff", textDecoration: "none" }}>
-                  Course Catalog
-                </a>
-              </li>
-              <li style={{ marginBottom: "10px" }}>
-                <a href="#student-support" style={{ color: "#e0e0ff", textDecoration: "none" }}>
-                  Student Support
-                </a>
-              </li>
-              <li style={{ marginBottom: "10px" }}>
-                <a href="#retreats" style={{ color: "#e0e0ff", textDecoration: "none" }}>
-                  Organizational Retreats
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 style={{ marginBottom: "20px", fontSize: "18px" }}>Services</h3>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-              <li style={{ marginBottom: "10px" }}>
-                <a href="#" style={{ color: "#e0e0ff", textDecoration: "none" }}>
-                  Leadership Development
-                </a>
-              </li>
-              <li style={{ marginBottom: "10px" }}>
-                <a href="#" style={{ color: "#e0e0ff", textDecoration: "none" }}>
-                  Financial Training
-                </a>
-              </li>
-              <li style={{ marginBottom: "10px" }}>
-                <a href="#" style={{ color: "#e0e0ff", textDecoration: "none" }}>
-                  Digital Marketing
-                </a>
-              </li>
-              <li style={{ marginBottom: "10px" }}>
-                <a href="#" style={{ color: "#e0e0ff", textDecoration: "none" }}>
-                  Team Building
-                </a>
-              </li>
-              <li style={{ marginBottom: "10px" }}>
-                <a href="#" style={{ color: "#e0e0ff", textDecoration: "none" }}>
-                  Customized Programs
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 style={{ marginBottom: "20px", fontSize: "18px" }}>Contact Us</h3>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-              <li style={{ marginBottom: "15px", display: "flex", alignItems: "center", gap: "10px" }}>
-                <FiHome color="#e0e0ff" />
-                <span>123 Business Avenue, Suite 200</span>
-              </li>
-              <li style={{ marginBottom: "15px", display: "flex", alignItems: "center", gap: "10px" }}>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="#e0e0ff"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                </svg>
-                <span>+1 (555) 123-4567</span>
-              </li>
-              <li style={{ marginBottom: "15px", display: "flex", alignItems: "center", gap: "10px" }}>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="#e0e0ff"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
-                <span>info@bjmprofessional.com</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div
-          style={{
-            borderTop: "1px solid #e0e0ff30",
-            marginTop: "40px",
-            paddingTop: "20px",
-            textAlign: "center",
-            maxWidth: "1200px",
-            margin: "40px auto 0",
-          }}
-        >
-          <p style={{ color: "#e0e0ff" }}>
-            © {new Date().getFullYear()} BJM Professional Development. All Rights Reserved.
-          </p>
-          <div style={{ display: "flex", justifyContent: "center", gap: "20px", marginTop: "15px" }}>
-            <a href="#" style={{ color: "#e0e0ff", textDecoration: "none" }}>
-              Terms of Service
-            </a>
-            <a href="#" style={{ color: "#e0e0ff", textDecoration: "none" }}>
-              Privacy Policy
-            </a>
-            <a href="#" style={{ color: "#e0e0ff", textDecoration: "none" }}>
-              Accessibility Statement
-            </a>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }
