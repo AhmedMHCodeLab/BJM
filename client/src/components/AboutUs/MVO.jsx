@@ -228,13 +228,7 @@ const BJMMissionValues = () => {
         "To be recognized as a valued, an impactful, innovative and efficient Management Consulting Partner to our clients in Africa.",
       color: "#2563eb",
     },
-    {
-      title: "Our Mission",
-      icon: Target,
-      content:
-        "Our mission is to make available to Private Sector, not-for profit and Public Sector innovative solutions, value added services and expertise, enabling them to achieve their long-term financial, economic and sustainability vision.",
-      color: "#3b82f6",
-    },
+    
     {
       title: "Our Core Values",
       icon: Heart,

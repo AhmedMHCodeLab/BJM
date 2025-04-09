@@ -58,8 +58,12 @@ const AboutUs = () => {
       <FadeInSection delay={0.4}>
         <MGV />
       </FadeInSection>
+
+      
     </motion.div>
+    
   )
+  
 }
 
 export default AboutUs
