@@ -131,7 +131,7 @@ const Program = () => {
         </p>
       </section>
 
-      {/* Overview Section */}
+      {/* Overview Section 
       <section id="overview" style={{ padding: "60px 40px", maxWidth: "1200px", margin: "0 auto" }}>
         <div style={{ display: "flex", flexWrap: "wrap", gap: "40px", alignItems: "center" }}>
           <div style={{ flex: "1 1 500px" }}>
@@ -179,6 +179,8 @@ const Program = () => {
         </div>
       </section>
 
+      */}
+      
       {/* Course Catalog Section */}
       <section
         id="courses"

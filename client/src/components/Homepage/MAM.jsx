@@ -33,7 +33,7 @@ import React, {
         </ul>
         <p className="mam-summary" style={{ textAlign: isMobile ? 'center' : 'left' }}>{MAMIntro.summary}</p>
         <a
-          href="https://mam-ga-76f7cc7199e7.herokuapp.com/" 
+          href="https://github.com/AhmedMHCodeLab/BJM/blob/main/client/public/MAM%20PROFILE%20LATEST%20VERSION%20(1).pdf" 
           rel="noopener noreferrer"
           className="mam-button"
         >
