@@ -34,10 +34,11 @@ import React, {
       <p className="mam-summary" style={{ textAlign: isMobile ? 'center' : 'left' }}>{MAMIntro.summary}</p>
       <a
         href="/MAMprofile.pdf"
+        download="MAMprofile.pdf"
         rel="noopener noreferrer"
         className="mam-button"
       >
-        Visit MAM's Website
+        Download MAM Profile
       </a>
       <p className="mam-disclosure" style={{ textAlign: 'center', marginTop: '1rem' }}>
         <em>{MAMDisclosure}</em>
