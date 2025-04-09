@@ -14,12 +14,14 @@
   width: 100%;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   margin-bottom: 1.5rem;
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
   aspect-ratio: 2 / 3;
+  will-change: transform, box-shadow;
+  cursor: pointer;
 }
 
 .card:hover {
@@ -40,21 +42,23 @@
   height: 100%;
   object-fit: cover;
   object-position: center top;
-  transition: transform 0.5s ease;
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   display: block;
+  will-change: transform;
 }
 
 .card:hover .cardImage {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 .cardInner {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.2));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.2));
   z-index: 2;
   opacity: 0;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  pointer-events: none; /* Ensure this doesn't interfere with hover */
 }
 
 .card:hover .cardInner {
@@ -72,11 +76,17 @@
   align-items: center;
   padding: 1.5rem;
   transform: translateY(100%);
-  transition: transform 0.4s ease;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+  pointer-events: none; /* This ensures hover doesn't get interrupted */
+  max-height: 85%; /* Limit height to prevent overflow */
+  overflow-y: auto; /* Add scrolling for long content */
 }
 
 .card:hover .content {
   transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
 }
 
 .title {
@@ -87,6 +97,10 @@
   text-align: center;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   margin-bottom: 0.75rem;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: auto;
 }
 
 .title span {
@@ -95,6 +109,41 @@
   font-size: 0.875rem;
   opacity: 0.9;
   margin-top: 0.25rem;
+}
+
+/* Bio text styling */
+.bio {
+  color: #fff;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s;
+  pointer-events: auto;
+  max-height: 150px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.bio::-webkit-scrollbar {
+  width: 4px;
+}
+
+.bio::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.bio::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.card:hover .bio {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .sci {
@@ -127,13 +176,16 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform, background-color;
+  pointer-events: auto;
+  cursor: pointer;
 }
 
 .socialButton:hover {
   color: #ffffff;
   background-color: rgba(8, 20, 248, 0.7);
-  transform: scale(1.1);
+  transform: scale(1.15) translateY(-3px);
 }
 
 .socialButton:focus-visible {
@@ -145,6 +197,10 @@
 .gridColumn {
   display: flex;
   height: 100%;
+}
+
+.socialIconWrapper {
+  pointer-events: auto; /* Re-enable pointer events for social buttons */
 }
 
 @media (min-width: 992px) {
@@ -182,6 +238,11 @@
 
   .card {
     min-height: 400px;
+  }
+
+  .bio {
+    font-size: 0.8rem;
+    max-height: 120px;
   }
 }
 
@@ -225,5 +286,11 @@
 
   .card {
     min-height: 350px;
+  }
+
+  .bio {
+    font-size: 0.75rem;
+    max-height: 100px;
+    margin-bottom: 0.5rem;
   }
 }
