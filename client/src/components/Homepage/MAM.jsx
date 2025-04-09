@@ -24,24 +24,24 @@ import React, {
   function ExpandedMAMContent({ isMobile }) {
     return (
       <div className="expanded-mam-content">
-        <h3 className="mam-title" style={{ textAlign: isMobile ? 'center' : 'left' }}>{MAMIntro.title}</h3>
-        <p className="mam-description" style={{ textAlign: isMobile ? 'center' : 'left' }}>{MAMIntro.description}</p>
-        <ul className="mam-services" style={{ paddingLeft: isMobile ? 0 : '20px' }}>
-          {MAMIntro.services.map((service, index) => (
-            <li key={index}>{service}</li>
-          ))}
-        </ul>
-        <p className="mam-summary" style={{ textAlign: isMobile ? 'center' : 'left' }}>{MAMIntro.summary}</p>
-        <a
-          href="https://github.com/AhmedMHCodeLab/BJM/blob/main/client/public/MAM%20PROFILE%20LATEST%20VERSION%20(1).pdf" 
-          rel="noopener noreferrer"
-          className="mam-button"
-        >
-          Visit MAM's Website
-        </a>
-        <p className="mam-disclosure" style={{ textAlign: 'center', marginTop: '1rem' }}>
-          <em>{MAMDisclosure}</em>
-        </p>
+      <h3 className="mam-title" style={{ textAlign: isMobile ? 'center' : 'left' }}>{MAMIntro.title}</h3>
+      <p className="mam-description" style={{ textAlign: isMobile ? 'center' : 'left' }}>{MAMIntro.description}</p>
+      <ul className="mam-services" style={{ paddingLeft: isMobile ? 0 : '20px' }}>
+        {MAMIntro.services.map((service, index) => (
+        <li key={index}>{service}</li>
+        ))}
+      </ul>
+      <p className="mam-summary" style={{ textAlign: isMobile ? 'center' : 'left' }}>{MAMIntro.summary}</p>
+      <a
+        href="/MAMprofile.pdf"
+        rel="noopener noreferrer"
+        className="mam-button"
+      >
+        Visit MAM's Website
+      </a>
+      <p className="mam-disclosure" style={{ textAlign: 'center', marginTop: '1rem' }}>
+        <em>{MAMDisclosure}</em>
+      </p>
       </div>
     );
   }
