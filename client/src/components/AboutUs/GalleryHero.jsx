@@ -6,46 +6,46 @@ import { Box, Text } from "@mantine/core"
 import { motion, AnimatePresence } from "framer-motion"
 import styles from "./GalleryHero.module.css"
 
-const galleryData = [
-  {
-    id: 1,
-    title: "Gambia ",
-    subtitle: "Breakfast & Networking",
-    location: "Gambia",
-    image: "https://bjmafrica.com/wp-content/uploads/2023/09/BJM51-1024x683.jpg",
-  },
-  {
-    id: 2,
-    title: "Swiss Alps - Switzerland",
-    subtitle: "Experience breathtaking views",
-    location: "Gambia",
-    image: "https://bjmafrica.com/wp-content/uploads/2023/09/BJM3.jpg",
-  },
-  {
-    id: 3,
-    title: "Bali - Indonesia",
-    subtitle: "Paradise on Earth awaits",
-    location: "Gambia",
-    image:
-      "https://scontent.fkul8-5.fna.fbcdn.net/v/t39.30808-6/305238122_572580524451636_4026373282440208838_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=2tnSSZHbCGsQ7kNvgFJfXAb&_nc_oc=AdhLy8cTfRG_CUF60f3Iu74BvH3wRKNyS8fgZJGjVkAV9RctJkm6ZBiLhuTQBoYQ37lv-Mkv6jzYIyTi34HxLy64&_nc_zt=23&_nc_ht=scontent.fkul8-5.fna&_nc_gid=AiGsPcBKS03WjWQk6cOVn21&oh=00_AYBwZoi9-crX0-lY5rKMxuvdRDDBK129DAOndgSd-IpZiQ&oe=67B6A559",
-  },
-  {
-    id: 4,
-    title: "Norwegian Fjords",
-    subtitle: "Nature at its finest",
-    location: "Gambia",
-    image: "https://bjmafrica.com/wp-content/uploads/2023/09/BJM53.jpg",
-  },
-  {
-    id: 5,
-    title: "Great Barrier Reef",
-    subtitle: "Underwater wonders",
-    location: "Gambia",
-    image: "https://bjmafrica.com/wp-content/uploads/2023/09/BJM6-2-1024x683.jpg",
-  },
-]
+  const galleryData = [
+    {
+      id: 1,
+      title: "Gambia",
+      subtitle: "Breakfast & Networking",
+      location: "Gambia",
+      image: "https://bjmafrica.com/wp-content/uploads/2023/09/BJM51-1024x683.jpg",
+    },
+    {
+      id: 2,
+      title: "Senegal",
+      subtitle: "Experience breathtaking views",
+      location: "Senegal",
+      image: "https://bjmafrica.com/wp-content/uploads/2023/09/BJM3.jpg",
+    },
+    {
+      id: 3,
+      title: "Nigeria",
+      subtitle: "Paradise on Earth awaits",
+      location: "Nigeria",
+      image:
+        "https://bjmafrica.com/wp-content/uploads/2023/09/BJM53.jpg"
+    },
+    {
+      id: 4,
+      title: "Ghana",
+      subtitle: "Nature at its finest",
+      location: "Ghana",
+      image: "https://bjmafrica.com/wp-content/uploads/2023/09/BJM53.jpg",
+    },
+    {
+      id: 5,
+      title: "Côte d'Ivoire",
+      subtitle: "Underwater wonders",
+      location: "Côte d'Ivoire",
+      image: "https://bjmafrica.com/wp-content/uploads/2023/09/BJM6-2-1024x683.jpg",
+    },
+  ]
 
-export default function GalleryHero() {
+  export default function GalleryHero() {
   const [activeIndex, setActiveIndex] = useState(2)
   const [isTransitioning, setIsTransitioning] = useState(false)
   const [isAutoScrolling, setIsAutoScrolling] = useState(true)
