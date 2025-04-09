@@ -76,7 +76,7 @@ function ArticleCard() {
   return (
     <Container size="xl" className={classes.wrapper}>
       <SectionTitle title="Empowering Your Vision" center marginBottom={80} />
-      <Grid align="flex-start">
+      <Grid justify="center" align="center">
         <Grid.Col span={{ base: 8, md: 'auto' }}>
           {services.map((service) => {
             return <ImageCard key={service.index} {...service} />
