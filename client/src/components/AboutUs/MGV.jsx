@@ -42,9 +42,15 @@ const StatBox = ({ value, label, index }) => {
     triggerOnce: true,
   })
 
-  // Parse the numeric value from the string
-  const numericValue = Number.parseFloat(value.replace(/[^0-9.]/g, ""))
-  const suffix = value.replace(numericValue, "")
+  // Safe parsing with error handling
+  let numericValue = 0;
+  let suffix = "";
+  
+  if (value && typeof value === 'string') {
+    const numericPart = value.replace(/[^0-9.]/g, "");
+    numericValue = numericPart ? Number.parseFloat(numericPart) : 0;
+    suffix = isNaN(numericValue) ? value : value.replace(numericPart, "");
+  }
 
   return (
     <motion.div
@@ -58,13 +64,16 @@ const StatBox = ({ value, label, index }) => {
       <Text
         size={isSmallMobile ? "1.2rem" : isMobile ? "1.5rem" : "2rem"}
         fw={600}
-        c="#6B6BFF"
         mb={4}
         style={{
           display: "inline-block",
           background: inView ? "linear-gradient(45deg, #6B6BFF, #8A8AFF)" : "none",
+          backgroundClip: "text",
           WebkitBackgroundClip: "text",
-          WebkitTextFillColor: inView ? "transparent" : "inherit",
+          color: "transparent",
+          WebkitTextFillColor: "transparent",
+          MozBackgroundClip: "text",
+          MozTextFillColor: "transparent",
           transition: "all 0.5s ease",
         }}
       >
