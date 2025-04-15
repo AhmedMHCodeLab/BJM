@@ -96,28 +96,44 @@ const MGV = () => {
   })
 
   return (
-    <Container size="lg" py={isMobile ? 30 : 50} ref={sectionRef}>
-      <motion.div initial="hidden" animate={sectionInView ? "visible" : "hidden"} variants={fadeInUp}>
-        <Text c="#6B6BFF" tt="uppercase" fw={500} mb={15} size="sm">
+    <Container 
+      size="lg" 
+      py={isMobile ? 30 : 50} 
+      ref={sectionRef}
+      sx={{ 
+        textAlign: "center",
+        margin: "0 auto"
+      }}
+    >
+      <motion.div 
+        initial="hidden" 
+        animate={sectionInView ? "visible" : "hidden"} 
+        variants={fadeInUp}
+        style={{ textAlign: "center" }}
+      >
+        <Text c="#6B6BFF" tt="uppercase" fw={500} mb={15} size="sm" ta="center">
           WHO WE ARE
         </Text>
       </motion.div>
 
-      <Grid>
+      <Grid justify="center">
         <Grid.Col>
           <Group
-            position={isMobile ? "start" : "apart"}
-            align="flex-start"
+            position="center"
+            align="center"
             spacing={isMobile ? "xl" : "md"}
-            sx={{ flexDirection: isMobile ? "column" : "row" }}
+            sx={{ flexDirection: isMobile ? "column" : "column" }}
           >
             <motion.div
               initial="hidden"
               animate={sectionInView ? "visible" : "hidden"}
               variants={fadeInLeft}
-              style={{ maxWidth: isMobile ? "100%" : 550 }}
+              style={{ 
+                maxWidth: isMobile ? "100%" : 550,
+                margin: "0 auto"
+              }}
             >
-              <Box maw={isMobile ? "100%" : 550}>
+              <Box maw={isMobile ? "100%" : 550} mx="auto">
                 <Title
                   order={1}
                   sx={{
@@ -125,9 +141,11 @@ const MGV = () => {
                     fontWeight: 600,
                     lineHeight: 1.2,
                     marginBottom: "1rem",
+                    
+                    
                   }}
                 >
-                  Making Life Smoother and Easier Every Day
+                  Making Life Smoother & Easier Every Day
                 </Title>
               </Box>
             </motion.div>
@@ -135,10 +153,13 @@ const MGV = () => {
               initial="hidden"
               animate={sectionInView ? "visible" : "hidden"}
               variants={fadeInRight}
-              style={{ maxWidth: isMobile ? "100%" : 550 }}
+              style={{ 
+                maxWidth: isMobile ? "100%" : 550,
+                margin: "0 auto"
+              }}
             >
-              <Box maw={isMobile ? "100%" : 550}>
-                <Text c="dimmed" size="md" lh={1.6}>
+              <Box maw={isMobile ? "100%" : 550} mx="auto">
+                <Text c="dimmed" size="md" lh={1.6} ta="center">
                   We are dedicated to making life smoother and easier every day with practical and user-friendly
                   solutions. Our focus is on simplifying your daily routines and enhancing your overall convenience.
                   Experience seamless solutions designed to fit effortlessly into your lifestyle.
@@ -150,134 +171,8 @@ const MGV = () => {
       </Grid>
 
       <Space h={isMobile ? 20 : 40} />
-      <Grid>
-        <Grid.Col span={isMobile ? 12 : 6}>
-          <motion.div
-            initial="hidden"
-            animate={sectionInView ? "visible" : "hidden"}
-            variants={fadeInLeft}
-            whileHover={{ y: -10, transition: { duration: 0.3 } }}
-          >
-            <Box
-              sx={{
-                height: isMobile ? 300 : 400,
-                borderRadius: 8,
-                overflow: "hidden",
-                position: "relative",
-                background: "#f8f9fa",
-                boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)",
-                transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                "&:hover": {
-                  boxShadow: "0 15px 40px rgba(0, 0, 0, 0.15)",
-                },
-              }}
-            >
-              <Box
-                sx={{
-                  position: "absolute",
-                  bottom: 0,
-                  left: 0,
-                  right: 0,
-                  background: "white",
-                  padding: "2rem",
-                  borderRadius: "8px",
-                  transform: "translateY(0)",
-                  transition: "transform 0.3s ease",
-                  "&:hover": {
-                    transform: "translateY(-5px)",
-                  },
-                }}
-              >
-                <Title order={3} mb="xs">
-                  Our Vision
-                </Title>
-                <Text c="dimmed" size="md" lh={1.6}>
-                  To be the leading innovator, transforming industries with cutting-edge solutions that improve lives.
-                </Text>
-              </Box>
-              <Box
-                sx={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  height: "60%",
-                  background: "url(/api/placeholder/800/600) center/cover",
-                  transition: "transform 0.5s ease",
-                  "&:hover": {
-                    transform: "scale(1.05)",
-                  },
-                }}
-              />
-            </Box>
-          </motion.div>
-        </Grid.Col>
 
-        <Grid.Col span={isMobile ? 12 : 6}>
-          <motion.div
-            initial="hidden"
-            animate={sectionInView ? "visible" : "hidden"}
-            variants={fadeInRight}
-            whileHover={{ y: -10, transition: { duration: 0.3 } }}
-          >
-            <Box
-              sx={{
-                height: isMobile ? 300 : 400,
-                borderRadius: 8,
-                overflow: "hidden",
-                position: "relative",
-                background: "#f8f9fa",
-                boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)",
-                transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                "&:hover": {
-                  boxShadow: "0 15px 40px rgba(0, 0, 0, 0.15)",
-                },
-              }}
-            >
-              <Box
-                sx={{
-                  position: "absolute",
-                  bottom: 0,
-                  left: 0,
-                  right: 0,
-                  background: "white",
-                  padding: "2rem",
-                  borderRadius: "8px",
-                  transform: "translateY(0)",
-                  transition: "transform 0.3s ease",
-                  "&:hover": {
-                    transform: "translateY(-5px)",
-                  },
-                }}
-              >
-                <Title order={3} mb="xs">
-                  Our Goal
-                </Title>
-                <Text c="dimmed" size="md" lh={1.6}>
-                  To consistently deliver exceptional value and achieve excellence in every project we undertake.
-                </Text>
-              </Box>
-              <Box
-                sx={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  height: "60%",
-                  background: "url(/api/placeholder/800/600) center/cover",
-                  transition: "transform 0.5s ease",
-                  "&:hover": {
-                    transform: "scale(1.05)",
-                  },
-                }}
-              />
-            </Box>
-          </motion.div>
-        </Grid.Col>
-      </Grid>
-
-      <Space h={isMobile ? 20 : 40} />
-      <Grid mt={isMobile ? 10 : 20}>
+      <Grid mt={isMobile ? 10 : 20} justify="center">
         <Grid.Col span={isMobile ? 6 : 3}>
           <StatBox value="92%" label="Happy Clients" index={0} />
         </Grid.Col>
