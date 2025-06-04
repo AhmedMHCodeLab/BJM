@@ -3,10 +3,10 @@
 import { useEffect } from "react"
 import ProfileCards from "../components/AboutUs/ProfileCards"
 import { SectionTitle } from "../components"
-import MGV from "../components/AboutUs/MGV"
 import BJMMissionValues from "../components/AboutUs/MVO"
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
+import MVO from "../components/AboutUs/MVO"
 
 // Fade-in animation for sections
 const FadeInSection = ({ children, delay = 0 }) => {
@@ -51,12 +51,8 @@ const AboutUs = () => {
         <ProfileCards />
       </FadeInSection>
 
-      <FadeInSection delay={0.3}>
-        <BJMMissionValues />
-      </FadeInSection>
-
       <FadeInSection delay={0.4}>
-        <MGV />
+        <MVO />
       </FadeInSection>
 
       

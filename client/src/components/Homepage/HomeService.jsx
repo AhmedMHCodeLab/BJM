@@ -22,31 +22,26 @@ function ArticleCard() {
   const services = [
     {
       index: 1,
-      name: 'Service 1',
-      description: '',
+      name: 'Business Development and Advisory',
+      description: 'Accelerate your business growth with strategic planning, targeted marketing insights, and expert proposal development.',
       image:
         'https://www.orkla.com/wp-content/uploads/sites/3/2023/12/L1490814-aspect-ratio-16-9-1920x1080.jpg',
     },
     {
       index: 2,
-      name: 'Service 2',
-      description: 'Description for service 2',
+      name: 'Training, Learning, and Capacity Building',
+      description: 'Empower your team with dynamic learning experiences that turn potential into measurable performance and innovation.',
       image:
         'https://athenauni.eu/wp-content/uploads/2023/01/Athena-BIP-16-9.jpg',
     },
     {
       index: 3,
-      name: 'Service 3',
-      description: 'Description for service 3',
+      name: 'Policy and Governance Support',
+      description: 'Develop robust organizational policies and governance structures that align with your strategic vision and operational excellence.',
       image:
         'https://us.123rf.com/450wm/fizkes/fizkes1805/fizkes180500740/102258630-diverse-young-people-talking-and-having-fun-together-in-cafe-girls-chatting-sharing-coffeehouse.jpg?ver=6',
     },
-    {
-      index: 4,
-      name: 'Service 4',
-      description: 'Description for service 4',
-      image: '/api/placeholder/600/800?text=Service+4',
-    },
+   
   ]
 
   const defaultImage =
@@ -108,7 +103,7 @@ function ArticleCard() {
                   <Text fw={500}>{service.name}</Text>
                 </Accordion.Control>
                 <Accordion.Panel>
-                  <Text size="sm" c="dimmed">
+                  <Text size="lg" c="dimmed">
                     {service.description}
                   </Text>
                 </Accordion.Panel>
