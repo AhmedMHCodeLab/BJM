@@ -534,7 +534,7 @@ const coreValues = [
 
 // Stats data
 const stats = [
-  { number: "15+", label: "Years of Experience", sublabel: "Proven track record" },
+  { number: "25+", label: "Years of Experience", sublabel: "Proven track record" },
   { number: "100%", label: "Client Satisfaction", sublabel: "Quality commitment" },
   { number: "All", label: "Sectors Served", sublabel: "Diverse expertise" },
   { number: "100+", label: "Successful Projects", sublabel: "Delivered excellence" },
@@ -732,29 +732,26 @@ function MVO() {
 
   return (
     <div style={styles.container}>
-      
 
-      {/* Prominent Mission Section */}
-      <div style={styles.missionSection}>
-        <div style={styles.missionPattern} aria-hidden="true" />
+        <div style={styles.missionSection}>
+          <div style={styles.missionPattern} aria-hidden="true" />
 
-        <div style={styles.missionContent}>
-          <div>
-            <div style={styles.missionBadge}>WHO WE ARE</div>
-            <h2 style={responsiveStyles.missionTitle}>
-              Making Business Excellence
-              <br style={{ display: isMobile ? "none" : "block" }} />
-              <span style={styles.missionHighlight}>{isMobile ? " " : ""}Accessible Every Day</span>
-            </h2>
-            <div style={styles.missionDivider} />
-            <p style={styles.missionText}>
-              Our mission is to make available to Private Sector, not-for profit and Public Sector innovative solutions,
-              value added services and expertise, enabling them to achieve their long-term financial, economic and
-              sustainability vision.
-            </p>
-          </div>
+          <div style={styles.missionContent}>
+            <div>
+          <h2 style={responsiveStyles.missionTitle}>
+            Our mission is to make available to Private Sector, not-for profit and Public Sector
+            {" "}
+            <span style={styles.missionHighlight}>innovative solutions,
+            value added services and expertise, enabling them to achieve their long-term financial, economic and
+            sustainability vision.</span>
+          </h2>
+          <div style={styles.missionDivider} />
+          <p style={styles.missionText}>
+           
+          </p>
+            </div>
 
-          {/* Mission Stats */}
+            {/* Mission Stats */}
           <MissionStats responsiveStyles={responsiveStyles} />
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { ActionIcon, Anchor, Container, Flex, Group, Text } from '@mantine/core'
+import { ActionIcon, Anchor, Container, Flex, Group, Text, Stack } from '@mantine/core'
 import ImageLogo from './ImageLogo'
 import { socialLinks } from '../utils/constants'
 
@@ -22,9 +22,16 @@ const Footer = () => {
         align="center"
       >
         <ImageLogo />
-        <Text fw={500}>
-          Copyright &copy; BJM Management Consultancy Co. Ltd
-        </Text>
+        
+        <Stack gap="xs" align="center">
+          <Text fw={500} ta="center">
+            Copyright &copy; BJM Management Consultancy Co. Ltd
+          </Text>
+          <Text size="sm" ta="center" fw={700}>
+            BJM Corporate House, Bijilo West Coast Region, OIC Road, The Gambia
+          </Text>
+        </Stack>
+        
         <Group gap={1} justify="flex-end" wrap="nowrap">
           {socialLinks.map((link, index) => {
             return (
