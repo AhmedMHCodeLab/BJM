@@ -1,15 +1,17 @@
-import nodemailer from 'nodemailer'
-import nodemailerConfig from './nodemailerConfig.js'
+import nodemailer from 'nodemailer';
+import nodemailerConfig from './nodemailerConfig.js';
 
-const transporter = nodemailer.createTransport(nodemailerConfig)
+const transporter = nodemailer.createTransport(nodemailerConfig);
 
-const sendEmail = async ({ from, subject, html }) => {
+const sendEmail = async ({ senderEmail, subject, html }) => {
+  // Validate or sanitize senderEmail before this point
   return transporter.sendMail({
-    from, // sender address
-    to: 'thad.kessler@ethereal.email', // list of receivers
-    subject, // Subject line
-    html, // html body
-  })
-}
+    from: 'info@bjmafrica.com',    // must match authenticated user
+    replyTo: senderEmail,          // directs replies to the form user
+    to: 'info@bjmafrica.com',      // destination inbox
+    subject,
+    html,
+  });
+};
 
-export default sendEmail
+export default sendEmail;

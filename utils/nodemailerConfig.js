@@ -1,8 +1,12 @@
 export default {
-  host: 'smtp.ethereal.email',
+  host: 'mail.bjmafrica.com',
   port: 587,
+  secure: false, // use STARTTLS
   auth: {
-    user: 'thad.kessler@ethereal.email',
-    pass: 'mx43B9aE8KUH4mhRPj',
+    user: 'info@bjmafrica.com',
+    pass: 'Secured1016!',
   },
-}
+  // optional: enable debug logs
+  // logger: true,
+  // debug: true,
+};

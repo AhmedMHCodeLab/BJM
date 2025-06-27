@@ -36,7 +36,7 @@ import React, {
         href="https://mam-ga-76f7cc7199e7.herokuapp.com"
         className="mam-button"
       >
-        Download MAM Profile
+        MAM's Website
       </a>
       <p className="mam-disclosure" style={{ textAlign: 'center', marginTop: '1rem' }}>
         <em>{MAMDisclosure}</em>
