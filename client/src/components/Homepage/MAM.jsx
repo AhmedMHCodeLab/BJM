@@ -34,7 +34,6 @@ import React, {
       <p className="mam-summary" style={{ textAlign: isMobile ? 'center' : 'left' }}>{MAMIntro.summary}</p>
       <a
         href="https://mam-ga-76f7cc7199e7.herokuapp.com"
-        rel="noopener noreferrer"
         className="mam-button"
       >
         Download MAM Profile
